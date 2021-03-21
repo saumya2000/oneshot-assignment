@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Chart from "react-apexcharts";
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -10,7 +9,7 @@ class App extends Component {
 
   componentDidMount = async () => {
     await axios
-      .get("http://localhost:3001/countCollege_byCourses")
+      .get("/countCollege_byCourses")
       .then((res) => {
         this.setState({
           labels: res.data["courses"],

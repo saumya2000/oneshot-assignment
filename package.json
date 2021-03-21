@@ -6,9 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "server": "node app.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -35,10 +33,7 @@
     "passport-local": "^1.0.0",
     "validator": "^12.1.0"
   },
-  "engines": {
-    "node": "12.4.0",
-    "npm":"6.9.0"
-  },
+  
   "author": "Saumya Gupta",
   "license": "ISC"
 }
